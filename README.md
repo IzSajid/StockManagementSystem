@@ -1,7 +1,4 @@
-# BikePricePrediction
-
-
-## Stock Management System Utilizing Design Patterns
+# Stock Management System Utilizing Design Patterns
 
 
 ### By, 
