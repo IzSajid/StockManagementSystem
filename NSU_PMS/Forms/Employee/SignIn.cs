@@ -42,7 +42,7 @@ namespace NSU_PMS.Forms.Employee
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error", ex.Message);
+                MessageBox.Show(ex.Message, "Error");
             }
             finally
             {

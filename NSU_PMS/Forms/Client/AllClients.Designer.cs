@@ -87,17 +87,17 @@
             // label9
             // 
             label9.AutoSize = true;
-            label9.Font = new Font("Antipasto Pro DemiBold", 21.7499981F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label9.Font = new Font("Microsoft Sans Serif", 21.7499981F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label9.Location = new Point(21, 28);
             label9.Name = "label9";
-            label9.Size = new Size(131, 35);
+            label9.Size = new Size(157, 33);
             label9.TabIndex = 24;
             label9.Text = "All Clients";
             // 
             // CloseBtn
             // 
             CloseBtn.FlatStyle = FlatStyle.Flat;
-            CloseBtn.Font = new Font("Antipasto Pro DemiBold", 12F, FontStyle.Bold);
+            CloseBtn.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold);
             CloseBtn.ForeColor = Color.IndianRed;
             CloseBtn.Location = new Point(1371, 12);
             CloseBtn.Name = "CloseBtn";

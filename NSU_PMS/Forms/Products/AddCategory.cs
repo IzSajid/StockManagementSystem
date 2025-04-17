@@ -26,7 +26,8 @@ namespace NSU_PMS.Forms.Products
             this.Enabled = false;
             try
             {
-                var cat = new Models.Category.Builder().WithID("Cat-" + random.Next(10000, 99999) + "-" + random.Next(10000, 99999) + "-" + random.Next(10000, 99999))
+                var cat = new Models.Category.Builder()
+                            .WithID("Cat-" + random.Next(10000, 99999) + "-" + random.Next(10000, 99999) + "-" + random.Next(10000, 99999))
                             .WithName(CategoryTxtBox.Text)
                             .WithDescription(DescriptionTxtBox.Text)
                             .WithStatus("Active")

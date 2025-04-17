@@ -44,6 +44,12 @@ namespace NSU_PMS.Models
             public string Status { get; private set; }
             public DateTime DateTime { get; private set; }
 
+            // constructor 
+            public Category Build()
+            {
+                //gives the builder to the category 
+                return new Category(this);
+            }
             public Builder WithID(string id)
             {
                 ID = id;
@@ -74,10 +80,6 @@ namespace NSU_PMS.Models
                 return this;
             }
 
-            public Category Build()
-            {
-                return new Category(this);
-            }
         }
 
     }

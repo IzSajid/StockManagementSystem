@@ -46,11 +46,11 @@
             // ComentTxtBox
             // 
             ComentTxtBox.AutoSize = true;
-            ComentTxtBox.Font = new Font("Antipasto Pro DemiBold", 11.249999F, FontStyle.Bold);
+            ComentTxtBox.Font = new Font("Microsoft Sans Serif", 11.249999F, FontStyle.Bold);
             ComentTxtBox.ForeColor = Color.Black;
             ComentTxtBox.Location = new Point(790, 88);
             ComentTxtBox.Name = "ComentTxtBox";
-            ComentTxtBox.Size = new Size(74, 19);
+            ComentTxtBox.Size = new Size(90, 18);
             ComentTxtBox.TabIndex = 37;
             ComentTxtBox.Text = "Comments";
             // 
@@ -67,7 +67,7 @@
             // SaveBtn
             // 
             SaveBtn.FlatStyle = FlatStyle.Flat;
-            SaveBtn.Font = new Font("Antipasto Pro DemiBold", 14.2499981F, FontStyle.Bold);
+            SaveBtn.Font = new Font("Microsoft Sans Serif", 14.2499981F, FontStyle.Bold);
             SaveBtn.Location = new Point(1157, 110);
             SaveBtn.Name = "SaveBtn";
             SaveBtn.Size = new Size(145, 51);
@@ -79,11 +79,11 @@
             // label7
             // 
             label7.AutoSize = true;
-            label7.Font = new Font("Antipasto Pro DemiBold", 11.249999F, FontStyle.Bold);
+            label7.Font = new Font("Microsoft Sans Serif", 11.249999F, FontStyle.Bold);
             label7.ForeColor = Color.Black;
             label7.Location = new Point(431, 88);
             label7.Name = "label7";
-            label7.Size = new Size(59, 19);
+            label7.Size = new Size(69, 18);
             label7.TabIndex = 34;
             label7.Text = "Address";
             // 
@@ -100,7 +100,7 @@
             // PhoneTxtBox
             // 
             PhoneTxtBox.BorderStyle = BorderStyle.None;
-            PhoneTxtBox.Font = new Font("Antipasto Pro Bold", 12F, FontStyle.Bold);
+            PhoneTxtBox.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold);
             PhoneTxtBox.Location = new Point(30, 256);
             PhoneTxtBox.Multiline = true;
             PhoneTxtBox.Name = "PhoneTxtBox";
@@ -111,7 +111,7 @@
             // EmailTxtBox
             // 
             EmailTxtBox.BorderStyle = BorderStyle.None;
-            EmailTxtBox.Font = new Font("Antipasto Pro Bold", 12F, FontStyle.Bold);
+            EmailTxtBox.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold);
             EmailTxtBox.Location = new Point(31, 180);
             EmailTxtBox.Multiline = true;
             EmailTxtBox.Name = "EmailTxtBox";
@@ -122,7 +122,7 @@
             // NameTxtBox
             // 
             NameTxtBox.BorderStyle = BorderStyle.None;
-            NameTxtBox.Font = new Font("Antipasto Pro Bold", 12F, FontStyle.Bold);
+            NameTxtBox.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold);
             NameTxtBox.Location = new Point(31, 91);
             NameTxtBox.Multiline = true;
             NameTxtBox.Name = "NameTxtBox";
@@ -169,7 +169,7 @@
             // CloseBtn
             // 
             CloseBtn.FlatStyle = FlatStyle.Flat;
-            CloseBtn.Font = new Font("Antipasto Pro DemiBold", 14.2499981F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            CloseBtn.Font = new Font("Microsoft Sans Serif", 14.2499981F, FontStyle.Bold, GraphicsUnit.Point, 0);
             CloseBtn.ForeColor = Color.IndianRed;
             CloseBtn.Location = new Point(1157, 180);
             CloseBtn.Name = "CloseBtn";
@@ -204,6 +204,7 @@
             StartPosition = FormStartPosition.CenterScreen;
             Text = "AddClient";
             FormClosed += AddClient_FormClosed;
+            Load += AddClient_Load;
             ResumeLayout(false);
             PerformLayout();
         }

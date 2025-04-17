@@ -36,7 +36,7 @@ namespace NSU_PMS.Forms.General
 
                 ListViewItem newItem = new ListViewItem(new[]
                 {
-                        sale.Sales.ID,sale.ClientName, sale.Sales.Total.ToString("F2"), sale.Sales.Discount.ToString("F2"), 
+                    sale.Sales.ID,sale.ClientName, sale.Sales.Total.ToString("F2"), sale.Sales.Discount.ToString("F2"), 
                     sale.Sales.Quantity.ToString(), sale.Sales.SubTotal.ToString("F2"), sale.Sales.DateTime.ToString()
                 });
 

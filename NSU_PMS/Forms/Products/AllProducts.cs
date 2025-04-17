@@ -24,10 +24,10 @@ namespace NSU_PMS.Forms.Products
 
         public ListViewItem ToListViewItem()
         {
-            return new ListViewItem(new[]
-            {
-            ID, Name, Description, CategoryName, Discount, Quantity, Price, Status
-        });
+            // converting step 2 
+            return new ListViewItem(new[]{
+                ID, Name, Description, CategoryName, Discount, Quantity, Price, Status
+            });
         }
     }
 
@@ -36,6 +36,7 @@ namespace NSU_PMS.Forms.Products
     {
         public static ProductListViewItem Adapt(Models.Product product, string categoryName)
         {
+            //converting step 1 
             return new ProductListViewItem
             {
                 ID = product.ID,
@@ -62,22 +63,32 @@ namespace NSU_PMS.Forms.Products
         {
             this.Close();
         }
+
+
+
         WinformDbContext _windb = new WinformDbContext();
         private async void AllProducts_Load(object sender, EventArgs e)
         {
-            var prods = await (
-                from p in _windb.Products
-                join c in _windb.Categories on p.Category equals c.ID
-                select new { Product = p, CategoryName = c.Name }
-            ).ToListAsync();
-
             int quantity = 0;
             double price = 0;
 
+            // getting product and category name 
+            var prods = await (
+                from p in _windb.Products
+                join c in _windb.Categories on p.Category equals c.ID
+                select new { Product = p, CategoryName = c.Name } 
+            ).ToListAsync();
+
+
             foreach (var prod in prods)
             {
-                var adapted = ProductAdapter.Adapt(prod.Product, prod.CategoryName);
-                DetailsListView.Items.Add(adapted.ToListViewItem());
+
+                // converting step 1 
+                ProductListViewItem adapted = ProductAdapter.Adapt(prod.Product, prod.CategoryName);
+
+                // converting step 2 
+                ListViewItem lvi = adapted.ToListViewItem();
+                DetailsListView.Items.Add(lvi);
 
                 quantity += prod.Product.Quantity;
                 price += prod.Product.Price * prod.Product.Quantity;

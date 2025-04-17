@@ -19,9 +19,25 @@ namespace NSU_PMS
         public DbSet<Sale> Sales { get; set; }
         public DbSet<SalesDetail> SalesDetails { get; set; }
 
+
+        public WinformDbContext(DbContextOptions<WinformDbContext> options)
+       : base(options)
+        {
+        }
+
+        public WinformDbContext() // For production usage (e.g., `new WinformDbContext()`)
+        {
+        }
+
+        
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"Data Source=.\SQLEXPRESS;Initial Catalog=NSU_PMS;User Id=ggwp;password=123;TrustServerCertificate=True;MultipleActiveResultSets=True;");
+            if (!optionsBuilder.IsConfigured)
+            {
+                // Use your actual SQL Server or SQLite DB here for production
+                optionsBuilder.UseSqlServer(@"Data Source=.\SQLEXPRESS;Initial Catalog=NSU_PMS;User Id=ggwp;password=123;TrustServerCertificate=True;MultipleActiveResultSets=True;");
+            }
+            
         }
     }
 }
