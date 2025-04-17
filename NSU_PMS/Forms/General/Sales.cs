@@ -279,7 +279,7 @@ namespace NSU_PMS.Forms.General
                     {
                         ID = mid,
                         ClientID = cid,
-                        Quantity = int.Parse(ListViewFunctions.CalculateColumnSum(DetailsListView, 2).ToString()),
+                        Quantity = int.Parse(ListViewFunctions.Instance.CalculateColumnSum(DetailsListView, 2).ToString()),
                         Total = double.Parse(TotalTxtBox.Text),
                         Discount = double.Parse(DiscountTxtBox.Text),
                         SubTotal = double.Parse(GrandTotalTxtBox.Text),
